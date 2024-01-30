@@ -6,7 +6,10 @@ export default function GetNotes() {
 
     const fetchData = async () => {
         try {
-            const data = await axios.get("http://localhost:8008/notes",{withCredentials:true});
+            const data = await axios.get(
+              "https://backend-production-def2.up.railway.app/notes",
+              { withCredentials: true }
+            );
             console.log(data.data);
             setNotes(data.data);
             

@@ -11,9 +11,10 @@ export default function Register() {
 
     const fetchData = async (input) => {
         const data = await axios.post(
-          "http://localhost:8008/users/register",
-          input,{
-            withCredentials: true
+          "https://backend-production-def2.up.railway.app/users/register",
+          input,
+          {
+            withCredentials: true,
           }
         );
         console.log(data);

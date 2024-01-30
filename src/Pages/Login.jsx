@@ -12,7 +12,7 @@ export default function Login() {
   const fetchData = async (input) => {
     try {
       const data = await axios.post(
-        "http://localhost:8008/users/login",
+        "https://backend-production-def2.up.railway.app/users/login",
         input,
         {
           withCredentials: true,

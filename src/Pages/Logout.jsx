@@ -6,7 +6,10 @@ export default function Logout() {
   const { auth, setAuth } = useContext(AuthContext);
   const fetchData = async () => {
     try {
-      const data = await axios.get("http://localhost:8008/users/logout",{withCredentials:true});
+      const data = await axios.get(
+        "https://backend-production-def2.up.railway.app/users/logout",
+        { withCredentials: true }
+      );
       console.log(data);
       setAuth(false);
       
